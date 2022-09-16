@@ -1,0 +1,31 @@
+{
+  "name": "tuner-api",
+  "version": "1.0.0",
+  "description": "Let's make our own music playlist app!",
+  "main": "app.js",
+  "scripts": {
+    "db:init": "psql -U postgres -f db/schema.sql",
+		"db:seed": "psql -U postgres -f db/seed.sql",
+		"test": "jest --runInBand",
+		"seed": "psql -U postgres -f db/schema.sql && psql -U postgres -f db/seed.sql"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0IG/tuner-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/0IG/tuner-api/issues"
+  },
+  "homepage": "https://github.com/0IG/tuner-api#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "jest": "^29.0.3",
+    "nodemon": "^2.0.20",
+    "pg-promise": "^10.12.0",
+    "supertest": "^6.2.4"
+  }
+}
